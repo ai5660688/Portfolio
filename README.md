@@ -24,7 +24,7 @@ A personal portfolio website showcasing my experience as a **Lead Document Contr
 ### Run Locally
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Portfolio.git
+git clone https://github.com/ai5660688/Portfolio.git
 cd Portfolio
 dotnet run
 ```
