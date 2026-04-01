@@ -1,0 +1,563 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<!-- ===== HERO SECTION ===== -->
+<section id="hero" class="hero-section">
+    <div class="hero-particles" id="particles"></div>
+    <div class="container">
+        <div class="row align-items-center min-vh-100">
+            <div class="col-lg-7">
+                <p class="hero-greeting animate-on-scroll">Hello, I'm</p>
+                <h1 class="hero-name animate-on-scroll">Ahmed Mahmoud</h1>
+                <div class="hero-title-wrapper animate-on-scroll">
+                    <span class="hero-title">Lead Document Controller &amp; Systems Developer</span>
+                </div>
+                <p class="hero-description animate-on-scroll">
+                    Lead Document Controller &amp; Systems Developer with <strong>@((int)((DateTime.Now - new DateTime(2013, 6, 1)).TotalDays / 365.25))+ years</strong> of experience.
+                    Creator of <strong>PMS (Piping Management System)</strong>, an enterprise <strong>ASP.NET Core 8</strong> platform
+                    deployed on <strong>Riyas NGL &amp; Jafurah Gas Processing Projects</strong>. Driving digital transformation in industrial QC workflows.
+                </p>
+                <div class="hero-buttons animate-on-scroll">
+                    <a href="#projects" class="btn btn-primary-custom btn-lg me-3">
+                        <i class="fas fa-briefcase me-2"></i>View My Work
+                    </a>
+                    <a href="#contact" class="btn btn-outline-custom btn-lg">
+                        <i class="fas fa-paper-plane me-2"></i>Get In Touch
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-5 d-none d-lg-block text-center">
+                <div class="hero-graphic animate-on-scroll">
+                    <div class="code-window">
+                        <div class="code-window-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="code-window-title">developer.cs</span>
+                        </div>
+                        <div class="code-window-body">
+                            <pre><code><span class="kw">public class</span> <span class="cl">Developer</span>
+{
+    <span class="kw">public string</span> Name => <span class="st">"Ahmed"</span>;
+    <span class="kw">public string</span> Role => <span class="st">"Lead Doc Controller"</span>;
+    <span class="kw">public string[]</span> Skills =>
+    [
+        <span class="st">"C#"</span>, <span class="st">"ASP.NET Core 8"</span>,
+        <span class="st">"SQL Server"</span>, <span class="st">"Azure"</span>
+    ];
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-indicator">
+        <a href="#about"><i class="fas fa-chevron-down"></i></a>
+    </div>
+</section>
+
+<!-- ===== ABOUT SECTION ===== -->
+<section id="about" class="section-padding bg-dark-alt">
+    <div class="container">
+        <div class="section-header text-center animate-on-scroll">
+            <span class="section-tag"><i class="fas fa-user me-2"></i>About Me</span>
+            <h2 class="section-title">Who I Am</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="row mt-5 align-items-center">
+            <div class="col-lg-5 text-center animate-on-scroll">
+                <div class="about-avatar">
+                    <div class="avatar-ring">
+                        <div class="avatar-inner">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 animate-on-scroll">
+                <h3 class="about-subtitle">Lead Document Controller &amp; Systems Developer</h3>
+                <p class="about-text">
+                    Lead Document Controller &amp; Systems Developer with <strong>@((int)((DateTime.Now - new DateTime(2013, 6, 1)).TotalDays / 365.25))+ years</strong> of experience
+                    in construction QA/QC, digital systems development, and process automation. I combine software engineering
+                    expertise with deep field knowledge of <strong>welding, NDT, and QC workflows</strong> to deliver
+                    efficient, scalable digital solutions.
+                </p>
+                <p class="about-text">
+                    My flagship project — <strong>PMS (Piping Management System)</strong> — is an enterprise
+                    <strong>ASP.NET Core 8</strong> platform deployed on <strong>Riyas NGL &amp; Jafurah Gas Processing Projects</strong>,
+                    supporting <strong>20+ daily users</strong> and <strong>120,000+ welded joints</strong> — handling
+                    DFR/DWR reports, joint tracking, NDE/RT selection, welder qualifications,
+                    automated PDF generation, and Azure OCR document digitisation.
+                </p>
+
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="@((int)((DateTime.Now - new DateTime(2013, 6, 1)).TotalDays / 365.25))">@((int)((DateTime.Now - new DateTime(2013, 6, 1)).TotalDays / 365.25))+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="120000">120k+</div>
+                        <div class="stat-label">Joints Tracked</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="20">20+</div>
+                        <div class="stat-label">Daily Users</div>
+                    </div>
+                </div>
+
+                <a href="#contact" class="btn btn-primary-custom mt-4">
+                    <i class="fas fa-download me-2"></i>Contact Me
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SKILLS SECTION ===== -->
+<section id="skills" class="section-padding">
+    <div class="container">
+        <div class="section-header text-center animate-on-scroll">
+            <span class="section-tag"><i class="fas fa-cogs me-2"></i>Skills</span>
+            <h2 class="section-title">My Tech Stack</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="row mt-5 g-4">
+            <!-- Backend -->
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="skill-card">
+                    <div class="skill-card-icon backend">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h4>Backend</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">ASP.NET Core 8</span>
+                        <span class="skill-tag">Entity Framework Core</span>
+                        <span class="skill-tag">Razor Pages</span>
+                        <span class="skill-tag">REST APIs</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frontend -->
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="skill-card">
+                    <div class="skill-card-icon frontend">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h4>Frontend</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Bootstrap 5</span>
+                        <span class="skill-tag">jQuery</span>
+                        <span class="skill-tag">Responsive Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Database -->
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="skill-card">
+                    <div class="skill-card-icon database">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h4>Database</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">SQL Server</span>
+                        <span class="skill-tag">Azure SQL</span>
+                        <span class="skill-tag">T-SQL</span>
+                        <span class="skill-tag">Stored Procedures</span>
+                        <span class="skill-tag">Data Modeling</span>
+                        <span class="skill-tag">EF Core Migrations</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DevOps & Tools -->
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="skill-card">
+                    <div class="skill-card-icon devops">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h4>DevOps &amp; Tools</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Visual Studio</span>
+                        <span class="skill-tag">SSMS</span>
+                        <span class="skill-tag">Agile</span>
+                        <span class="skill-tag">SDLC</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reporting -->
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="skill-card">
+                    <div class="skill-card-icon reporting">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h4>Reporting</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PDF Generation</span>
+                        <span class="skill-tag">Excel Export</span>
+                        <span class="skill-tag">QuestPDF / iText</span>
+                        <span class="skill-tag">Data Visualization</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Integrations -->
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="skill-card">
+                    <div class="skill-card-icon integrations">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h4>Integrations</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Azure App Services</span>
+                        <span class="skill-tag">Azure AI / OCR</span>
+                        <span class="skill-tag">Azure Blob Storage</span>
+                        <span class="skill-tag">Email (SMTP)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PROJECTS SECTION ===== -->
+<section id="projects" class="section-padding bg-dark-alt">
+    <div class="container">
+        <div class="section-header text-center animate-on-scroll">
+            <span class="section-tag"><i class="fas fa-briefcase me-2"></i>Projects</span>
+            <h2 class="section-title">Featured Work</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <!-- PMS Project -->
+        <div class="row mt-5">
+            <div class="col-12 animate-on-scroll">
+                <div class="project-card featured">
+                    <div class="project-badge">
+                        <i class="fas fa-star me-1"></i> Featured Project
+                    </div>
+                    <div class="row g-0">
+                        <div class="col-lg-6 project-info-col">
+                            <div class="project-info">
+                                <h3 class="project-name">PMS — Piping Management System</h3>
+                                <p class="project-tagline">Enterprise QC &amp; Construction Workflow Platform</p>
+                                <p class="project-description">
+                                    A full‑stack enterprise system developed to streamline QC and construction
+                                    workflows for piping projects. Deployed at <strong>Riyas NGL &amp; Jafurah Gas Processing
+                                    Projects</strong> — supporting traceability for <strong>120,000+ joints</strong>,
+                                    <strong>20+ daily users</strong>, and reducing daily reporting time by <strong>~70%</strong>.
+                                </p>
+
+                                <div class="project-features">
+                                    <h5><i class="fas fa-check-circle me-2"></i>Key Modules</h5>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>DFR &amp; DWR with automated PDF</li>
+                                                <li>Joint Record &amp; Real‑Time Dashboards</li>
+                                                <li>NDE / RT Selection</li>
+                                                <li>Welder Qualification Tracking</li>
+                                                <li>Hydrotest Management</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>Spool Status Tracking</li>
+                                                <li>RFI &amp; Transmittal Control</li>
+                                                <li>Role‑Based Access Management</li>
+                                                <li>Azure OCR Document Digitisation</li>
+                                                <li>SMTP‑Based Email Automation</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="project-tech">
+                                    <span class="tech-badge">ASP.NET Core 8</span>
+                                    <span class="tech-badge">C#</span>
+                                    <span class="tech-badge">Entity Framework Core</span>
+                                    <span class="tech-badge">SQL Server</span>
+                                    <span class="tech-badge">Bootstrap 5</span>
+                                    <span class="tech-badge">JavaScript</span>
+                                    <span class="tech-badge">Azure OCR</span>
+                                    <span class="tech-badge">SMTP Email</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 project-visual-col">
+                            <div class="project-visual">
+                                <div class="pms-module-grid">
+                                    <div class="pms-module"><i class="fas fa-fire"></i><span>Welding</span></div>
+                                    <div class="pms-module"><i class="fas fa-search"></i><span>NDE/RT</span></div>
+                                    <div class="pms-module"><i class="fas fa-clipboard-list"></i><span>Reports</span></div>
+                                    <div class="pms-module"><i class="fas fa-tint"></i><span>Hydrotest</span></div>
+                                    <div class="pms-module"><i class="fas fa-users"></i><span>Welders</span></div>
+                                    <div class="pms-module"><i class="fas fa-project-diagram"></i><span>Joints</span></div>
+                                    <div class="pms-module"><i class="fas fa-file-alt"></i><span>RFI Log</span></div>
+                                    <div class="pms-module"><i class="fas fa-chart-bar"></i><span>Progress</span></div>
+                                    <div class="pms-module"><i class="fas fa-cog"></i><span>Settings</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== EXPERIENCE SECTION ===== -->
+<section id="experience" class="section-padding">
+    <div class="container">
+        <div class="section-header text-center animate-on-scroll">
+            <span class="section-tag"><i class="fas fa-briefcase me-2"></i>Experience</span>
+            <h2 class="section-title">Professional Journey</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="timeline mt-5">
+            <div class="timeline-item animate-on-scroll">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h4>QC Document Controller &amp; Systems Developer</h4>
+                        <span class="timeline-company">Riyas NGL &amp; Jafurah Gas Processing Projects</span>
+                        <span class="timeline-date"><i class="fas fa-calendar-alt me-1"></i>Feb 2023 – Present</span>
+                    </div>
+                    <ul class="timeline-details">
+                        <li>Designed and developed PMS (Piping Management System) using ASP.NET Core 8, Azure App Services, OCR, Blob Storage, and SQL Server</li>
+                        <li>Led full SDLC: requirements gathering with QC engineers, database design, development, testing, deployment, and user training</li>
+                        <li>Built executive dashboards, automated PDF reporting engines, and SQL analytical models that reduced daily reporting time by ~70%</li>
+                        <li>Enabled real‑time traceability for 120,000+ welded joints across ARAMCO's Jafurah Gas Processing Project</li>
+                        <li>Implemented Azure OCR workflows for document digitisation and SMTP‑based email automation</li>
+                        <li>Managed role‑based access and maintained a live system with 20+ daily users</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item animate-on-scroll">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h4>QC Senior Document Controller &amp; Systems Developer</h4>
+                        <span class="timeline-company">Contrasteel — EFS Meltshop Extension</span>
+                        <span class="timeline-date"><i class="fas fa-calendar-alt me-1"></i>Jan 2022 – Jan 2023</span>
+                    </div>
+                    <ul class="timeline-details">
+                        <li>Developed Access‑based QC tools for NCR, punch list, and certificate tracking</li>
+                        <li>Improved NCR close‑out cycle through digital traceability enhancements</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item animate-on-scroll">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h4>Project Document Controller &amp; Systems Developer</h4>
+                        <span class="timeline-company">Egyptian Maintenance Company (EMC)</span>
+                        <span class="timeline-date"><i class="fas fa-calendar-alt me-1"></i>Aug 2021 – Dec 2021</span>
+                    </div>
+                    <ul class="timeline-details">
+                        <li>Managed vendor documents and as‑built deliverables</li>
+                        <li>Supported QC teams with welding and NDT log digitisation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item animate-on-scroll">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h4>QC Senior Document Controller &amp; Systems Developer</h4>
+                        <span class="timeline-company">TECHINT — South Helwan Supercritical Power Plant (3×650 MW)</span>
+                        <span class="timeline-date"><i class="fas fa-calendar-alt me-1"></i>Jan 2017 – Jul 2021</span>
+                    </div>
+                    <ul class="timeline-details">
+                        <li>Led document control for a major power project; introduced SQL‑based tracking for test packages and final turnover (TOP)</li>
+                        <li>Coordinated RFIs, transmittals, and NCR close‑out with owner, consultants, and subcontractors</li>
+                        <li>Trained junior staff on EDMS and quality records management</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item animate-on-scroll">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h4>QC Senior Document Controller &amp; Systems Developer</h4>
+                        <span class="timeline-company">EL‑NOUR — Beni Suef Combined Cycle Power Plant (4800 MW)</span>
+                        <span class="timeline-date"><i class="fas fa-calendar-alt me-1"></i>May 2016 – Dec 2016</span>
+                    </div>
+                    <ul class="timeline-details">
+                        <li>Maintained welding control registers, WPS tracking, and welder performance records for a large‑scale power plant</li>
+                        <li>Prepared daily welding reports (DWR) and fit‑up reports (DFR) for client submission</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item animate-on-scroll">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h4>QC Senior Document Controller &amp; Systems Developer</h4>
+                        <span class="timeline-company">KAHROMIKA — Suez Thermal Power Plant (1×650 MW)</span>
+                        <span class="timeline-date"><i class="fas fa-calendar-alt me-1"></i>Nov 2014 – Apr 2016</span>
+                    </div>
+                    <ul class="timeline-details">
+                        <li>Managed QC documentation for boiler and piping works; created detailed joint traceability logs</li>
+                        <li>Supported NDT coordination and ensured all records matched project specifications</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item animate-on-scroll">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h4>QC Document Controller &amp; Systems Developer</h4>
+                        <span class="timeline-company">HASSAN ALLAM — Egyptian Hydrocarbon (EHC) Project</span>
+                        <span class="timeline-date"><i class="fas fa-calendar-alt me-1"></i>Jun 2013 – Oct 2014</span>
+                    </div>
+                    <ul class="timeline-details">
+                        <li>Established digital logs for transmittals and vendor documents</li>
+                        <li>Assisted in setting up document control procedures for the project</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== EDUCATION SECTION ===== -->
+<section id="education" class="section-padding bg-dark-alt">
+    <div class="container">
+        <div class="section-header text-center animate-on-scroll">
+            <span class="section-tag"><i class="fas fa-graduation-cap me-2"></i>Education</span>
+            <h2 class="section-title">Education &amp; Certifications</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="row mt-5 g-4 justify-content-center">
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="edu-card">
+                    <div class="edu-icon"><i class="fas fa-university"></i></div>
+                    <h5>Bachelor of Commerce</h5>
+                    <p class="edu-institution">Suez Canal University</p>
+                    <span class="edu-year">2009</span>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="edu-card">
+                    <div class="edu-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h5>Business &amp; IT Skills</h5>
+                    <p class="edu-institution">Future Generation Foundation (FGF)</p>
+                    <span class="edu-year">2010</span>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="edu-card">
+                    <div class="edu-icon"><i class="fas fa-chart-line"></i></div>
+                    <h5>Lean Six Sigma Yellow Belt</h5>
+                    <p class="edu-institution">Professional Certification</p>
+                    <span class="edu-year">In Progress — Target 2026</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4 justify-content-center">
+            <div class="col-lg-6 animate-on-scroll">
+                <div class="lang-card">
+                    <h5><i class="fas fa-language me-2"></i>Languages</h5>
+                    <div class="lang-items">
+                        <div class="lang-item">
+                            <span class="lang-name">Arabic</span>
+                            <span class="lang-level">Native</span>
+                        </div>
+                        <div class="lang-item">
+                            <span class="lang-name">English</span>
+                            <span class="lang-level">Professional (Technical documentation &amp; business communication)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section id="contact" class="section-padding">
+    <div class="container">
+        <div class="section-header text-center animate-on-scroll">
+            <span class="section-tag"><i class="fas fa-envelope me-2"></i>Contact</span>
+            <h2 class="section-title">Let's Work Together</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle mt-3">
+                Have a project in mind or want to collaborate? I'd love to hear from you.
+            </p>
+        </div>
+
+        <div class="row mt-5 justify-content-center">
+            <div class="col-lg-4 animate-on-scroll">
+                <div class="contact-info-cards">
+                    <div class="contact-info-card">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <h5>Email</h5>
+                        <a href="mailto:ahmed.mahmoud@aicsteel.com">ahmed.mahmoud&#64;aicsteel.com</a>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <h5>Phone</h5>
+                        <a href="tel:+966554144752">+966 55 414 4752</a>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h5>Location</h5>
+                        <p>Saudi Arabia</p>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                        <h5>LinkedIn</h5>
+                        <a href="https://linkedin.com/" target="_blank">Connect with me</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 animate-on-scroll">
+                <form class="contact-form" id="contactForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="John Doe" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="john@example.com" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" class="form-control" id="subject" placeholder="Project Inquiry" />
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary-custom btn-lg w-100">
+                        <i class="fas fa-paper-plane me-2"></i>Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

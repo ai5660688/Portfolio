@@ -1,0 +1,13 @@
+{
+  "rules": {
+    "declaration-property-value-no-unknown": [
+      true,
+      {
+        "ignoreValues": {
+          "background-clip": ["text"],
+          "-webkit-background-clip": ["text"]
+        }
+      }
+    ]
+  }
+}
